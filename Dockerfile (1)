@@ -1,0 +1,14 @@
+
+# Dockerfile – Container sacré Barzakh
+
+FROM python:3.10-slim
+
+# Créer le répertoire de travail
+WORKDIR /app
+
+# Copier les fichiers nécessaires
+COPY barzakh.py .
+COPY exemple_barzakh_terminal.py .
+
+# Commande par défaut
+CMD ["python", "exemple_barzakh_terminal.py"]
